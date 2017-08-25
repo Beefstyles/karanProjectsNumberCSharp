@@ -8,10 +8,13 @@ namespace KaranNumberProjects
 {
     class PiToNthDigit
     {
+        int count = 0;
         public void CalculatePiToNthDigit()
         {
             int digit = 0;
             bool correctInput = false;
+            double piCalculated;
+            
 
             while (!correctInput)
             {
@@ -34,7 +37,14 @@ namespace KaranNumberProjects
             }
 
             Console.WriteLine("Finding pi to {0}th digit", digit);
+
+            Console.WriteLine(piReturn(digit));
             Console.ReadKey();
+        }
+
+        double piReturn(int digit)
+        {
+            return 1 + digit / (2.0 * digit + 1) * piReturn(digit + 1);
         }
     }
 }
