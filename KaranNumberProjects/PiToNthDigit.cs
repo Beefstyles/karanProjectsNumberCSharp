@@ -8,11 +8,10 @@ namespace KaranNumberProjects
 {
     class PiToNthDigit
     {
-        int count = 0;
         const int ARRINT = 2000;
         const int SCALE = 10000;
 
-        public void CalculatePiToNthDigit()
+        public static void CalculatePiToNthDigit()
         {
             int digit = 0;
             bool correctInput = false;
@@ -44,7 +43,7 @@ namespace KaranNumberProjects
             Console.ReadKey();
         }
 
-        string piReturn(int digits)
+        static string piReturn(int digits)
         {
             StringBuilder pi = new StringBuilder();
             int[] array = new int[digits + 1];
@@ -67,7 +66,7 @@ namespace KaranNumberProjects
                 pi.Append((carry + sum / SCALE).ToString());
                 carry = sum % SCALE;
             }
-            string piString = pi.ToString().Remove(1, 2);
+            string piString = pi.ToString().Remove(0, 1);
 
             return "3." + piString;
         }
