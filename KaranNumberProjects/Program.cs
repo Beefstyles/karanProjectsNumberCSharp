@@ -10,7 +10,8 @@ namespace KaranNumberProjects
     {
         static void Main()
         {
-            PiToNthDigit.CalculatePiToNthDigit();
+            //PiToNthDigit.CalculatePiToNthDigit();
+            FibbonaciSequence.NextFibonacci();
         }
 
     }

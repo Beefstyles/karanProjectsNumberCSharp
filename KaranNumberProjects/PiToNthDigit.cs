@@ -37,9 +37,12 @@ namespace KaranNumberProjects
                 
         }
         
-            Console.WriteLine("Finding pi to {0}th digit", digit);
 
-            //Console.WriteLine(piReturn(digit));
+
+            Console.WriteLine("Finding pi to {0}th digit mathematically", digit);
+            Console.WriteLine(piReturn(digit));
+
+            Console.WriteLine("Finding pi to {0}th digit using string format", digit);
             Console.WriteLine(piReturnMathPi(digit));
             Console.ReadKey();
         }
