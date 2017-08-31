@@ -39,7 +39,8 @@ namespace KaranNumberProjects
         
             Console.WriteLine("Finding pi to {0}th digit", digit);
 
-            Console.WriteLine(piReturn(digit));
+            //Console.WriteLine(piReturn(digit));
+            Console.WriteLine(piReturnMathPi(digit));
             Console.ReadKey();
         }
 
@@ -69,6 +70,14 @@ namespace KaranNumberProjects
             string piString = pi.ToString().Remove(0, 1);
 
             return "3." + piString;
+        }
+
+        static string piReturnMathPi(int digits)
+        {
+            double pi = Math.PI;
+            string format = "N" + digits.ToString();
+            string piToRequiredDecimal = pi.ToString(format);
+            return piToRequiredDecimal;
         }
 
 
