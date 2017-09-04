@@ -8,7 +8,8 @@ namespace KaranNumberProjects
 {
     class FibbonaciSequence
     {
-   
+        const double GoldenRatio = 1.61803398874989484820458683436;
+
         public static void NextFibonacci()
         {
             int digit = 0;
@@ -35,7 +36,7 @@ namespace KaranNumberProjects
 
             }
 
-            Console.WriteLine("Finding pi to {0}th digit", digit);
+            Console.WriteLine("Finding fibonacci to {0}th digit", digit);
             RtnFibonacci(digit);
 
             Console.ReadKey();
@@ -43,12 +44,22 @@ namespace KaranNumberProjects
 
         static void RtnFibonacci(int maxDigit)
         {
-            int previousValue = 0;
-            for (int i = 0; i <= maxDigit; i+= previousValue)
+            int prevValue;
+            Console.WriteLine(0);
+            Console.WriteLine(1);
+            if (maxDigit > 2)
             {
-                Console.WriteLine(i);
-                previousValue = i;
+                for (int i = 2; i <= maxDigit; i++)
+                {
+                    Console.WriteLine(GoldenRatio ^ i - (1 - GoldenRatio) ^ i) / Math.Sqrt(5);
+
+                }
             }
+            else
+            {
+
+            }
+            
         }
     }
 }
