@@ -44,14 +44,17 @@ namespace KaranNumberProjects
 
         static void RtnFibonacci(int maxDigit)
         {
-            int prevValue;
-            Console.WriteLine(0);
-            Console.WriteLine(1);
+            int prevValue = 1;
+            int prevValueMinus = 0;
+            //Console.WriteLine(prevValueMinus);
+            //Console.WriteLine(prevValue);
             if (maxDigit > 2)
             {
-                for (int i = 2; i <= maxDigit; i++)
+                for (int i = 0; i <= maxDigit; i+= (prevValue + prevValueMinus))
                 {
-                    Console.WriteLine(GoldenRatio ^ i - (1 - GoldenRatio) ^ i) / Math.Sqrt(5);
+                    prevValueMinus = prevValue;
+                    prevValue = i;
+                    Console.WriteLine(i);
 
                 }
             }
