@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="FibbonaciSequence.cs" />
     <Compile Include="PiToNthDigit.cs" />
+    <Compile Include="PrimeFactorisation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
