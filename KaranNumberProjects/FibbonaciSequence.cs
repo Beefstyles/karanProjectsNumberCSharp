@@ -22,7 +22,14 @@ namespace KaranNumberProjects
                 {
                     if (digit > 0)
                     {
-                        correctInput = true;
+                        if(digit <= 90)
+                        {
+                            correctInput = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Ensure input is less than 90 due to limitation of long");
+                        }
                     }
                     else
                     {
@@ -44,25 +51,21 @@ namespace KaranNumberProjects
 
         static void RtnFibonacci(int maxDigit)
         {
-            int prevValue = 1;
-            int prevValueMinus = 0;
-            //Console.WriteLine(prevValueMinus);
-            //Console.WriteLine(prevValue);
+            long prevValue = 1;
+            long prevValueMinus = 0;
+            long currentValue = 1;
+            Console.WriteLine(prevValueMinus);
+            Console.WriteLine(prevValue);
             if (maxDigit > 2)
             {
-                for (int i = 0; i <= maxDigit; i+= (prevValue + prevValueMinus))
+                for (int i = 1; i <= maxDigit; i++)
                 {
+                    currentValue = prevValueMinus + prevValue;
                     prevValueMinus = prevValue;
-                    prevValue = i;
-                    Console.WriteLine(i);
-
+                    prevValue = currentValue;
+                    Console.WriteLine(currentValue);
                 }
-            }
-            else
-            {
-
-            }
-            
+            }            
         }
     }
 }
