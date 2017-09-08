@@ -8,14 +8,16 @@ namespace KaranNumberProjects
 {
     class PrimeFactorisation
     {
+        
         public static void PrimeFactor()
         {
             int digit = 0;
             bool correctInput = false;
 
+
             while (!correctInput)
             {
-                Console.WriteLine("Find all prime factor(s) for input");
+                Console.WriteLine("Find all unique prime factor(s) for input");
                 if (Int32.TryParse(Console.ReadLine(), out digit))
                 {
                     if (digit > 0)
@@ -34,7 +36,7 @@ namespace KaranNumberProjects
 
             }
 
-            Console.WriteLine("Finding prime factor(s) for {0}", digit);
+            Console.WriteLine("Finding unique prime factor(s) for {0}", digit);
             RtnPrimeFactors(digit);
 
             Console.ReadKey();
@@ -42,11 +44,12 @@ namespace KaranNumberProjects
 
         static void RtnPrimeFactors(int factor)
         {
+            List<int> primeFactors = new List<int>();
             //Prints the numbers of 2 that divide into factor
-            while(factor % 2 == 0)
+            while (factor % 2 == 0)
             {
                 //i.e. there is a factor of 2 here
-                Console.WriteLine(2);
+                primeFactors.Add(2);
                 factor /= 2;
             }
 
@@ -55,7 +58,7 @@ namespace KaranNumberProjects
             {
                 while (factor % i == 0)
                 {
-                    Console.WriteLine(i);
+                    primeFactors.Add(i);
                     factor /= i;
                 }
             }
@@ -63,9 +66,13 @@ namespace KaranNumberProjects
             //If factor is prime and greater than 2 then factor will not become 1 by above 2 steps so itself is a factor
             if(factor > 2)
             {
-                Console.WriteLine(factor);
+                primeFactors.Add(factor);
             }
-
+            primeFactors = primeFactors.Distinct().ToList();
+            foreach (var primeFactor in primeFactors)
+            {
+                Console.WriteLine(primeFactor);
+            }
         }
 
     }
