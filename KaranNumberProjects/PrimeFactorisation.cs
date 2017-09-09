@@ -8,7 +8,6 @@ namespace KaranNumberProjects
 {
     class PrimeFactorisation
     {
-        
         public static void PrimeFactor()
         {
             int digit = 0;

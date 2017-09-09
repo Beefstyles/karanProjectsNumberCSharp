@@ -12,7 +12,8 @@ namespace KaranNumberProjects
         {
             //PiToNthDigit.CalculatePiToNthDigit();
             //FibbonaciSequence.NextFibonacci();
-            PrimeFactorisation.PrimeFactor();
+            //PrimeFactorisation.PrimeFactor();
+            NextPrimeNumber.FindNextPrimeNumber();
         }
 
     }
