@@ -13,6 +13,7 @@ namespace KaranNumberProjects
             bool exitLoop = false;
             bool correctInput = false;
             int primeNumberPos = 0;
+            int currentPrimeNumber = 1;
             string input;
             while (!exitLoop)
             {
@@ -26,7 +27,7 @@ namespace KaranNumberProjects
                         if (input == "y" || input == "Y")
                         {
                             Console.WriteLine("Returning the {0}th prime", primeNumberPos);
-                            ReturnNextPrimeNumber(primeNumberPos);
+                            ReturnNextPrimeNumber(currentPrimeNumber);
                             primeNumberPos++;
                             correctInput = false;
                         }
@@ -48,10 +49,16 @@ namespace KaranNumberProjects
 
         private static void ReturnNextPrimeNumber(int currentPrimeNumber)
         {
-            bool isNumberPrime;
-            for (int i = currentPrimeNumber - 1; i > 0; i--)
+            bool isNumberPrime = true;
+            while (isNumberPrime)
             {
-
+                for (int i = currentPrimeNumber; i > 1; i--)
+                {
+                    if(currentPrimeNumber % i == 0)
+                    {
+                        isNumberPrime = false;
+                    }
+                }
             }
         }
     }
