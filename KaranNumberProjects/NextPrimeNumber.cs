@@ -28,7 +28,7 @@ namespace KaranNumberProjects
                         if (input == "y" || input == "Y")
                         {
                             Console.WriteLine("Returning the {0}th prime", primeNumberPos);
-                            currentPrimeValue = ReturnNextPrimeNumber(currentPrimeNumber);
+                            currentPrimeValue = ReturnNextPrimeNumber(currentPrimeValue);
                             primeNumberPos++;
                             correctInput = false;
                         }
@@ -51,23 +51,25 @@ namespace KaranNumberProjects
         private static int ReturnNextPrimeNumber(int currentPrimeNumber)
         {
             bool isNumberPrime = false;
-
-            currentPrimeNumber++;
+            int checkedNumber = currentPrimeNumber++;
             do
             {
+                checkedNumber++;
                 isNumberPrime = true;
-                for (int i = currentPrimeNumber - 1; i > 1; i--)
+                for (int i = checkedNumber - 1; i > 1; i--)
                 {
-                    Console.WriteLine("Checking {0} against {1}", currentPrimeNumber, i);
-                    if (currentPrimeNumber % i == 0)
+                    Console.WriteLine("Checking {0} against {1}", checkedNumber, i);
+                    if (checkedNumber % i == 0)
                     {
                         isNumberPrime = false;
                     }
                 }
                 
+                
             }
             while (!isNumberPrime);
 
+            Console.WriteLine("Prime number is {0}", currentPrimeNumber);
             return currentPrimeNumber;
         }
     }
