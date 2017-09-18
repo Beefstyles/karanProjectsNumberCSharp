@@ -14,7 +14,8 @@ namespace KaranNumberProjects
             //FibbonaciSequence.NextFibonacci();
             //PrimeFactorisation.PrimeFactor();
             //NextPrimeNumber.FindNextPrimeNumber();
-            FloorPlan.CalculateFloorPlan();
+            //FloorPlan.CalculateFloorPlan();
+            CollatzConjecture.CheckCollatzConjecture();
         }
 
     }
