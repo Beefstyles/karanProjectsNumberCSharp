@@ -15,7 +15,8 @@ namespace KaranNumberProjects
             //PrimeFactorisation.PrimeFactor();
             //NextPrimeNumber.FindNextPrimeNumber();
             //FloorPlan.CalculateFloorPlan();
-            CollatzConjecture.CheckCollatzConjecture();
+            //CollatzConjecture.CheckCollatzConjecture();
+            BubbleSort.BubbleSortImplementation();
         }
 
     }

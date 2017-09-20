@@ -42,7 +42,6 @@ namespace KaranNumberProjects
         private static int ReturnStepsCollatz(int inputDigit)
         {
             int numberOfSteps = 0;
-            int value;
             while(inputDigit > 1)
             {
                 numberOfSteps++;
