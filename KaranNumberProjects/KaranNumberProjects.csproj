@@ -46,6 +46,7 @@
     <Compile Include="CollatzConjecture.cs" />
     <Compile Include="FibbonaciSequence.cs" />
     <Compile Include="FloorPlan.cs" />
+    <Compile Include="MergeSort.cs" />
     <Compile Include="NextPrimeNumber.cs" />
     <Compile Include="PiToNthDigit.cs" />
     <Compile Include="PrimeFactorisation.cs" />
