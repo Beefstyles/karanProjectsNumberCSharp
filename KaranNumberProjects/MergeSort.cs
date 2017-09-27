@@ -33,13 +33,7 @@ namespace KaranNumberProjects
 
         private static List<int> MergeSortArray(List<int> arrayToBeSorted)
         {
-            if (arrayToBeSorted.Count == 1)
-            {
-                Console.WriteLine("Should return");
-                return arrayToBeSorted;
-            }
-
-            else
+            if (arrayToBeSorted.Count > 1)
             {
                 Console.WriteLine(arrayToBeSorted.Count);
 
@@ -63,6 +57,12 @@ namespace KaranNumberProjects
                 l2 = MergeSortArray(l2);
 
                 return MergeArray(l1, l2);
+            }
+
+            else
+            {
+                Console.WriteLine("Should return");
+                return arrayToBeSorted;
             }
         }
 
