@@ -8,6 +8,76 @@ namespace KaranNumberProjects
 {
     class MergeSort
     {
+        static int[] arrayToBeSorted = { 14, 33, 27, 10, 35, 19, 42, 44 };
+        static int[] sortedArray = { 0, 0, 0, 0, 0, 0, 0, 0 };
+        public static void Merging(int low, int mid, int high)
+        {
+            int l1, l2, i;
+            for (l1 = low, l2 = mid+1, i = low; l1 <= mid && l2 <= mid; i++)
+            {
+                if(arrayToBeSorted[l1] <= arrayToBeSorted[l2])
+                {
+                    sortedArray[i] = arrayToBeSorted[l1++];
+                }
+                else
+                {
+                    sortedArray[i] = arrayToBeSorted[l2++];
+                }
+            }
+
+            while(l1 <= mid)
+            {
+                sortedArray[i++] = arrayToBeSorted[l1++];
+            }
+
+            while(l2 <= high)
+            {
+                sortedArray[i++] = arrayToBeSorted[l2++];
+            }
+
+            for (i = low; i <= high; i++)
+            {
+                arrayToBeSorted[i] = sortedArray[i];
+            }
+        }
+
+        public static void Sort(int low, int high)
+        {
+            int mid;
+
+            if (low < high)
+            {
+                mid = (low + high) / 2;
+                Sort(low, mid);
+                Sort(mid+1, high);
+                Merging(low, mid, high);
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        public static void ImplementMergeSort()
+        {
+            Console.WriteLine("Unsorted array of {0} length", arrayToBeSorted.Length);
+            foreach (var item in arrayToBeSorted)
+            {
+                Console.Write(item + " ");
+            }
+
+            int max = arrayToBeSorted.Length;
+
+            Sort(0, max);
+
+            Console.WriteLine("Sorted array of {0} length", arrayToBeSorted.Length);
+            foreach (var item in arrayToBeSorted)
+            {
+                Console.Write(item + " ");
+            }
+
+            Console.ReadKey();
+        }
         public static void MergeSortImplementation()
         {
             List<int> arrayToBeSorted = new List<int> { 14, 33, 27, 10, 35, 19, 42, 44};
