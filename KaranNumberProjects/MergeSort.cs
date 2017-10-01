@@ -8,12 +8,13 @@ namespace KaranNumberProjects
 {
     class MergeSort
     {
-        static int[] arrayToBeSorted = { 14, 33, 27, 10, 35, 19, 42, 44 };
-        static int[] sortedArray = { 0, 0, 0, 0, 0, 0, 0, 0 };
+        static int[] arrayToBeSorted = { 10, 14, 19, 26, 27, 31, 33, 35, 42, 44, 0 };
+        
         public static void Merging(int low, int mid, int high)
         {
+            int[] sortedArray = new int[arrayToBeSorted.Length];
             int l1, l2, i;
-            for (l1 = low, l2 = mid+1, i = low; l1 <= mid && l2 <= mid; i++)
+            for (l1 = low, l2 = mid + 1, i = low; l1 <= mid && l2 <= high; i++)
             {
                 if(arrayToBeSorted[l1] <= arrayToBeSorted[l2])
                 {
@@ -66,10 +67,11 @@ namespace KaranNumberProjects
                 Console.Write(item + " ");
             }
 
-            int max = arrayToBeSorted.Length;
+            int max = arrayToBeSorted.Length - 1;
 
             Sort(0, max);
 
+            Console.WriteLine("");
             Console.WriteLine("Sorted array of {0} length", arrayToBeSorted.Length);
             foreach (var item in arrayToBeSorted)
             {
