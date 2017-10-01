@@ -17,7 +17,9 @@ namespace KaranNumberProjects
             //FloorPlan.CalculateFloorPlan();
             //CollatzConjecture.CheckCollatzConjecture();
             //BubbleSort.BubbleSortImplementation();
-            MergeSort.ImplementMergeSort();
+            //MergeSort.ImplementMergeSort();
+
+            SieveOfEratosthenes.SieveInput();
         }
 
     }
