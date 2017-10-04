@@ -40,34 +40,37 @@ namespace KaranNumberProjects
 
         private static void Sieve(int maxNumber)
         {
-            Dictionary<int, bool> sieveList = new Dictionary<int, bool>();
+            //Create an array of bools indexed from 0 to maxNumber+1
+            bool[] sieveArray = new bool[(maxNumber+1)];
 
-            for (int i = 2; i <= maxNumber; i++)
+            //Set all bools in sieveArray to true
+            for (int i = 0; i < sieveArray.Length; i++)
             {
-                sieveList.Add(i, true);
+                sieveArray[i] = true;
             }
 
-            int checkDigit = 2;
-            for (int i = checkDigit; checkDigit* checkDigit <= maxNumber; i++)
+            //Start from smallest prime of 2
+            for (int i = 2; i * i <= maxNumber; i++)
                 {
-                    if (sieveList[i])
+                    //If sieveArray[i] is not changed by the following step, then it is prime (i.e. still true)
+                    if (sieveArray[i])
                     {
-                        for (int j = checkDigit*2; j <= maxNumber; j+=checkDigit)
+                        //Update for all multiples of i
+                        for (int j = i*2; j <= maxNumber; j+= i)
                         {
-                            sieveList[j] = false;
+                            sieveArray[j] = false;
                         }
                     }
                 }
-                checkDigit++;
-
-            foreach (KeyValuePair<int,bool> entry in sieveList)
+            Console.WriteLine("Printing all primes up to and including {0}", maxNumber);
+            for (int i = 2; i <= maxNumber; i++)
             {
-                Console.WriteLine("{0}, {1}", entry.Key, entry.Value);
-                if (entry.Value)
+                if (sieveArray[i])
                 {
-                    Console.Write(entry.Key + " ");
+                    Console.Write(i + " ");
                 }
             }
+            
         }
     }
 }
