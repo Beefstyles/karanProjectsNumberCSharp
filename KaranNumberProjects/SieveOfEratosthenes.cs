@@ -48,26 +48,21 @@ namespace KaranNumberProjects
             }
 
             int checkDigit = 2;
-            int multipleDigit = 0;
-
-            while(checkDigit <= Math.Sqrt(maxNumber))
-            {
-                for (int i = checkDigit; i <= maxNumber; i++)
+            for (int i = checkDigit; checkDigit* checkDigit <= maxNumber; i++)
                 {
                     if (sieveList[i])
                     {
-                        for (int j = checkDigit^2 + multipleDigit*checkDigit; j <= maxNumber; j++)
+                        for (int j = checkDigit*2; j <= maxNumber; j+=checkDigit)
                         {
                             sieveList[j] = false;
                         }
                     }
                 }
                 checkDigit++;
-                multipleDigit++;
-            }
 
             foreach (KeyValuePair<int,bool> entry in sieveList)
             {
+                Console.WriteLine("{0}, {1}", entry.Key, entry.Value);
                 if (entry.Value)
                 {
                     Console.Write(entry.Key + " ");
