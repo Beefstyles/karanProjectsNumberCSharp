@@ -45,6 +45,7 @@
     <Compile Include="BubbleSort.cs" />
     <Compile Include="CollatzConjecture.cs" />
     <Compile Include="FibbonaciSequence.cs" />
+    <Compile Include="FizzBuzz.cs" />
     <Compile Include="FloorPlan.cs" />
     <Compile Include="MergeSort.cs" />
     <Compile Include="NextPrimeNumber.cs" />

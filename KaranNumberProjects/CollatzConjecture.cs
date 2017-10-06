@@ -45,12 +45,14 @@ namespace KaranNumberProjects
             while(inputDigit > 1)
             {
                 numberOfSteps++;
+                //If number is even, divide number by 2
                 if (inputDigit % 2 == 0)
                 {
                     inputDigit /= 2;
                 }
                 else
                 {
+                    //Number is odd so multiply by 3 and add 1
                     inputDigit = inputDigit * 3 + 1;
                 }
             }

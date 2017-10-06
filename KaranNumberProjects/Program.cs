@@ -19,7 +19,8 @@ namespace KaranNumberProjects
             //BubbleSort.BubbleSortImplementation();
             //MergeSort.ImplementMergeSort();
 
-            SieveOfEratosthenes.SieveInput();
+            //SieveOfEratosthenes.SieveInput();
+            FizzBuzz.FizzBuzzImplementation();
         }
 
     }

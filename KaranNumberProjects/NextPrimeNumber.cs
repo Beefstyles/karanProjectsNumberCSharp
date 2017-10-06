@@ -57,6 +57,7 @@ namespace KaranNumberProjects
                 isNumberPrime = true;
                 for (int i = checkedNumber - 1; i > 1; i--)
                 {
+                    // if checked number is divisible by a value then not prime
                     if (checkedNumber % i == 0)
                     {
                         isNumberPrime = false;
