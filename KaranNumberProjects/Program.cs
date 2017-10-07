@@ -20,7 +20,8 @@ namespace KaranNumberProjects
             //MergeSort.ImplementMergeSort();
 
             //SieveOfEratosthenes.SieveInput();
-            FizzBuzz.FizzBuzzImplementation();
+            //FizzBuzz.FizzBuzzImplementation();
+            ReverseString.ReverseStringImplementation();
         }
 
     }
