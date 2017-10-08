@@ -21,7 +21,8 @@ namespace KaranNumberProjects
 
             //SieveOfEratosthenes.SieveInput();
             //FizzBuzz.FizzBuzzImplementation();
-            ReverseString.ReverseStringImplementation();
+            //ReverseString.ReverseStringImplementation();
+            PigLatin.PigLatinImplementation();
         }
 
     }

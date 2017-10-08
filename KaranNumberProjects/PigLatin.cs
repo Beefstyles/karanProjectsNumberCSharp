@@ -8,6 +8,8 @@ namespace KaranNumberProjects
 {
     class PigLatin
     {
+        static char[] listOfVowels = "aeiou".ToArray();
+        char[] listOfConstanants = "bcdfghjklmnpqrstvwxyz".ToArray();
         public static void PigLatinImplementation()
         {
             string inputString = "";
@@ -24,6 +26,14 @@ namespace KaranNumberProjects
         private static string ReturnPigLatin(string inputString)
         {
             char[] inputCharArray = inputString.ToArray();
+            //If >1 then first letter is a vowel
+            int pos = Array.IndexOf(listOfVowels, inputCharArray[0]);
+            if(pos > -1)
+            {
+                inputString += "way";
+            }
+
+            return inputString;
         }
     }
 }

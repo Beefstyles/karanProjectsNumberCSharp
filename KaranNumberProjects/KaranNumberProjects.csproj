@@ -49,6 +49,7 @@
     <Compile Include="FloorPlan.cs" />
     <Compile Include="MergeSort.cs" />
     <Compile Include="NextPrimeNumber.cs" />
+    <Compile Include="PigLatin.cs" />
     <Compile Include="PiToNthDigit.cs" />
     <Compile Include="PrimeFactorisation.cs" />
     <Compile Include="Program.cs" />
