@@ -14,24 +14,35 @@ namespace KaranNumberProjects
         public static void VowelCounterImplementation()
         {
             Dictionary<char, int> numberOfVowels = new Dictionary<char, int>();
+
+            string inputString = "";
+            Console.WriteLine("Enter an string");
+            inputString = Console.ReadLine();
+
             for (int i = 0; i < listOfVowels.Length; i++)
             {
                 numberOfVowels.Add(listOfVowels[i], 0);
             }
 
-            string inputString = "";
-            int vowelCount;
-            Console.WriteLine("Enter an string");
-            inputString = Console.ReadLine();
-            vowelCount = ReturnNumberOfVowels();
+            for (int i = 0; i < listOfVowels.Length; i++)
+            {
+                numberOfVowels[listOfVowels[i]] = ReturnNumberOfVowels(inputString, listOfVowels[i]);
+            }
 
-            Console.WriteLine("The input string is {0} and pig latin version is {1}", inputString, reversedString);
+            Console.WriteLine("The input string is {0}:", inputString);
+
+            Console.WriteLine("Letter: a,  Count: {0}", listOfVowels['a']);
+            Console.WriteLine("Letter: e,  Count: {0}", listOfVowels['e']);
+            Console.WriteLine("Letter: i,  Count: {0}", listOfVowels['i']);
+            Console.WriteLine("Letter: o,  Count: {0}", listOfVowels['o']);
+            Console.WriteLine("Letter: u,  Count: {0}", listOfVowels['u']);
             Console.ReadKey();
         }
 
         private static int ReturnNumberOfVowels(string inputString, char currentVowel)
         {
-
+            int count;
+            return count = inputString.Count(x => x == currentVowel);
         }
     }
 }

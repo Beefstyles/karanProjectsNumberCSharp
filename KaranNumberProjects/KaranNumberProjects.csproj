@@ -56,6 +56,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReverseString.cs" />
     <Compile Include="SieveOfEratosthenes.cs" />
+    <Compile Include="VowelCounter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
