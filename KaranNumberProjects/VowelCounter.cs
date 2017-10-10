@@ -19,6 +19,7 @@ namespace KaranNumberProjects
             Console.WriteLine("Enter an string");
             inputString = Console.ReadLine();
 
+            //Add vowels to dict
             for (int i = 0; i < listOfVowels.Length; i++)
             {
                 numberOfVowels.Add(listOfVowels[i], 0);
@@ -31,11 +32,11 @@ namespace KaranNumberProjects
 
             Console.WriteLine("The input string is {0}:", inputString);
 
-            Console.WriteLine("Letter: a,  Count: {0}", listOfVowels['a']);
-            Console.WriteLine("Letter: e,  Count: {0}", listOfVowels['e']);
-            Console.WriteLine("Letter: i,  Count: {0}", listOfVowels['i']);
-            Console.WriteLine("Letter: o,  Count: {0}", listOfVowels['o']);
-            Console.WriteLine("Letter: u,  Count: {0}", listOfVowels['u']);
+            Console.WriteLine("Letter: a,  Count: {0}", numberOfVowels['a']);
+            Console.WriteLine("Letter: e,  Count: {0}", numberOfVowels['e']);
+            Console.WriteLine("Letter: i,  Count: {0}", numberOfVowels['i']);
+            Console.WriteLine("Letter: o,  Count: {0}", numberOfVowels['o']);
+            Console.WriteLine("Letter: u,  Count: {0}", numberOfVowels['u']);
             Console.ReadKey();
         }
 
