@@ -24,7 +24,8 @@ namespace KaranNumberProjects
             //ReverseString.ReverseStringImplementation();
             //PigLatin.PigLatinImplementation();
             //VowelCounter.VowelCounterImplementation();
-            PalindromCheck.CheckIfPalindrome();
+            //PalindromCheck.CheckIfPalindrome();
+            WordCounter.WordCounterImplementation();
         }
 
     }
