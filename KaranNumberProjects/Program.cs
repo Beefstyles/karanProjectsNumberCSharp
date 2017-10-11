@@ -23,7 +23,8 @@ namespace KaranNumberProjects
             //FizzBuzz.FizzBuzzImplementation();
             //ReverseString.ReverseStringImplementation();
             //PigLatin.PigLatinImplementation();
-            VowelCounter.VowelCounterImplementation();
+            //VowelCounter.VowelCounterImplementation();
+            PalindromCheck.CheckIfPalindrome();
         }
 
     }
