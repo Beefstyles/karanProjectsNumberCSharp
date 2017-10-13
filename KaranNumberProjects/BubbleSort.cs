@@ -34,6 +34,7 @@ namespace KaranNumberProjects
                 {
                     for (int i = 0; i < arrayToBeSorted.Length - 1; i++)
                     {
+                        //If point 0 is greater than 0+1 then switch the positions
                         if (arrayToBeSorted[i] > arrayToBeSorted[i + 1])
                         {
                             int temp = arrayToBeSorted[i];
@@ -42,6 +43,7 @@ namespace KaranNumberProjects
                             arraySwapped = true;
                             Console.WriteLine("Switching {0} and {1}", arrayToBeSorted[i], arrayToBeSorted[i + 1]);
                         }
+                        //If point 0 is less than 0+1 so keep positions the same
                         else
                         {
                             arraySwapped = false;
