@@ -48,6 +48,7 @@
     <Compile Include="FizzBuzz.cs" />
     <Compile Include="FloorPlan.cs" />
     <Compile Include="MergeSort.cs" />
+    <Compile Include="ModularExp.cs" />
     <Compile Include="NextPrimeNumber.cs" />
     <Compile Include="PalindromCheck.cs" />
     <Compile Include="PigLatin.cs" />
