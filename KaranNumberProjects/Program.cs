@@ -25,7 +25,8 @@ namespace KaranNumberProjects
             //PigLatin.PigLatinImplementation();
             //VowelCounter.VowelCounterImplementation();
             //PalindromCheck.CheckIfPalindrome();
-            WordCounter.WordCounterImplementation();
+            //WordCounter.WordCounterImplementation();
+            ModularExp.ModularExpImplementation();
         }
 
     }

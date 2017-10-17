@@ -12,6 +12,7 @@ namespace KaranNumberProjects
         {
             int baseDigit = 0;
             int powerDigit = 0;
+            int result;
             bool correctInput = false;
 
             while (!correctInput)
@@ -22,7 +23,7 @@ namespace KaranNumberProjects
                     Console.WriteLine("Enter power integer");
                     if(Int32.TryParse(Console.ReadLine(), out powerDigit) && powerDigit > 0)
                     {
-
+                        correctInput = true;
                     }
 
                 }
@@ -32,36 +33,32 @@ namespace KaranNumberProjects
                 }
 
             }
+            result = FastExp(baseDigit, powerDigit);
 
-            Console.WriteLine("Finding fibonacci to {0}th digit", baseDigit);
-            FastExp(baseDigit, powerDigit);
+            Console.WriteLine("Result of {0}^{1} is {2}", baseDigit, powerDigit, result);
+            
             Console.ReadKey();
         }
 
-        private static float FastExp(int baseDigit, int powerDigit)
+        private static int FastExp(int baseDigit, int powerDigit)
         {
-            if(powerDigit < 0)
+            int result = 1;
+            while(powerDigit > 0)
             {
-                return FastExp(1 / baseDigit, -powerDigit);
+                if(powerDigit % 2 == 0)
+                {
+                    baseDigit = (int)Math.Pow(baseDigit,2);
+                    Console.WriteLine(baseDigit);
+                    powerDigit /= 2;
+                    Console.WriteLine("powr digt" + powerDigit);
+                }
+                else
+                {
+                    result = result * baseDigit;
+                    powerDigit--;
+                }
             }
-            else if (powerDigit == 0)
-            {
-                return 1;
-            }
-            else if (powerDigit == 1)
-            {
-                return baseDigit;
-            }
-
-            else if (baseDigit % 2 == 0)
-            {
-                return FastExp(baseDigit * baseDigit, powerDigit / 2);
-            }
-
-            else if (baseDigit % 2 != 0)
-            {
-                return baseDigit * FastExp(baseDigit * baseDigit, (powerDigit - 1) / 2);
-            }
+            return result;
         }
     }
 
