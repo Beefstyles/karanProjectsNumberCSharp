@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BinToFromDec.cs" />
     <Compile Include="BubbleSort.cs" />
     <Compile Include="CollatzConjecture.cs" />
     <Compile Include="FibbonaciSequence.cs" />

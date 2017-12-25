@@ -26,7 +26,8 @@ namespace KaranNumberProjects
             //VowelCounter.VowelCounterImplementation();
             //PalindromCheck.CheckIfPalindrome();
             //WordCounter.WordCounterImplementation();
-            ModularExp.ModularExpImplementation();
+            //ModularExp.ModularExpImplementation();
+            BinToFromDec.BinToFromDecConverter();
         }
 
     }
