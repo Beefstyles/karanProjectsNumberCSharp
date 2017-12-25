@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace KaranNumberProjects
@@ -59,10 +60,17 @@ namespace KaranNumberProjects
                         Console.WriteLine("Enter binary number");
                         if (Int32.TryParse(Console.ReadLine(), out inputNumber) && inputNumber > 0)
                         {
+                        if (Regex.IsMatch(inputNumber.ToString(), "^[0-1]") && !Regex.IsMatch(inputNumber.ToString(), "^[2-9]"))
+                        {
                             correctInput = true;
-                            Console.WriteLine(inputNumber);
                             resultDec = ReturnDecimalOrBinary(false, inputNumber);
                             Console.WriteLine("Decimal version of binary number {0} is {1}", inputNumber, resultDec);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Binary can only contain 0 or 1");
+                        }
+                            
                         }
                         else
                         {
