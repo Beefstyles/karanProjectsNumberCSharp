@@ -85,10 +85,20 @@ namespace KaranNumberProjects
             }
             else
             {
-                fromBase = 2;
-                long bin = Convert.ToInt64(number.ToString(), fromBase);
-                string binaryResult = ((int)bin).ToString();
-                return binaryResult;
+                try
+                {
+                    fromBase = 2;
+                    long bin = Convert.ToInt64(number.ToString(), fromBase);
+                    string binaryResult = ((int)bin).ToString();
+                    return binaryResult;
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    Console.WriteLine("You didn't enter a correct binary code. Only 1 or 0 allowed.");
+                    return "Error";
+                }
+                
             }
         }
     }
