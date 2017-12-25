@@ -45,6 +45,7 @@ namespace KaranNumberProjects
                     {
                         correctInput = true;
                         result = ReturnDecimalOrBinary(true, inputNumber);
+                        Console.WriteLine("Decimal version of bin number {0} is {1}", inputNumber, result);
                     }
                     else
                     {
@@ -58,20 +59,17 @@ namespace KaranNumberProjects
                     if (Int32.TryParse(Console.ReadLine(), out inputNumber) && inputNumber > 0)
                     {
                         correctInput = true;
+                        result = ReturnDecimalOrBinary(false, inputNumber);
+                        Console.WriteLine("Binary version of dec number {0} is {1}", inputNumber, result);
                     }
                     else
                     {
                         Console.WriteLine("Enter a binary number");
-                        result = ReturnDecimalOrBinary(false, inputNumber);
                     }
                 }
                 
 
             }
-            
-
-            Console.WriteLine("Bnary version of dec number {0} is {1}", inputNumber, result);
-
             Console.ReadKey();
         }
 
@@ -81,13 +79,13 @@ namespace KaranNumberProjects
             if (isDecimalInput)
             {
                 toBase = 2;
-                string binaryResult = Convert.ToString(number, toBase);
-                return binaryResult;
+                string decimalResult = Convert.ToString(number, toBase);
+                return decimalResult;
             }
             else
             {
                 toBase = 10;
-                string binaryResult = Convert.ToString(number, toBase);
+                string binaryResult = Convert.ToString(number, 10);
                 return binaryResult;
             }
         }
