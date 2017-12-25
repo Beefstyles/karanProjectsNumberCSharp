@@ -12,14 +12,13 @@ namespace KaranNumberProjects
         public static void BinToFromDecConverter()
         {
             int inputNumber = 0;
-            string result = "";
+            string resultBin = "";
+            string resultDec = "";
             string choice;
             bool correctInput = false;
             bool correctNumberInput = false;
             bool decimalInput = false;
 
-            while (!correctInput && !correctNumberInput)
-            {
                 while (!correctNumberInput)
                 {
                     Console.WriteLine("Type d/D for decmial value to convert, b/B for binary");
@@ -38,37 +37,38 @@ namespace KaranNumberProjects
                     }
                 }
 
-                if (decimalInput)
+                while (!correctInput)
                 {
-                    Console.WriteLine("Enter decimal number");
-                    if (Int32.TryParse(Console.ReadLine(), out inputNumber) && inputNumber > 0)
+                    if (decimalInput)
                     {
-                        correctInput = true;
-                        result = ReturnDecimalOrBinary(true, inputNumber);
-                        Console.WriteLine("Decimal version of bin number {0} is {1}", inputNumber, result);
+                        Console.WriteLine("Enter decimal number");
+                        if (Int32.TryParse(Console.ReadLine(), out inputNumber) && inputNumber > 0)
+                        {
+                            correctInput = true;
+                            resultBin = ReturnDecimalOrBinary(true, inputNumber);
+                            Console.WriteLine("Binary version of decimal number {0} is {1}", inputNumber, resultBin);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Enter an integer");
+                        }
                     }
+
                     else
                     {
-                        Console.WriteLine("Enter an integer");
+                        Console.WriteLine("Enter binary number");
+                        if (Int32.TryParse(Console.ReadLine(), out inputNumber) && inputNumber > 0)
+                        {
+                            correctInput = true;
+                            Console.WriteLine(inputNumber);
+                            resultDec = ReturnDecimalOrBinary(false, inputNumber);
+                            Console.WriteLine("Decimal version of binary number {0} is {1}", inputNumber, resultDec);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Enter a binary number");
+                        }
                     }
-                }
-
-                else
-                {
-                    Console.WriteLine("Enter binary number");
-                    if (Int32.TryParse(Console.ReadLine(), out inputNumber) && inputNumber > 0)
-                    {
-                        correctInput = true;
-                        result = ReturnDecimalOrBinary(false, inputNumber);
-                        Console.WriteLine("Binary version of dec number {0} is {1}", inputNumber, result);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Enter a binary number");
-                    }
-                }
-                
-
             }
             Console.ReadKey();
         }
@@ -76,6 +76,7 @@ namespace KaranNumberProjects
         static string ReturnDecimalOrBinary (bool isDecimalInput, int number)
         {
             int toBase;
+            int fromBase;
             if (isDecimalInput)
             {
                 toBase = 2;
@@ -84,8 +85,9 @@ namespace KaranNumberProjects
             }
             else
             {
-                toBase = 10;
-                string binaryResult = Convert.ToString(number, 10);
+                fromBase = 2;
+                long bin = Convert.ToInt64(number.ToString(), fromBase);
+                string binaryResult = ((int)bin).ToString();
                 return binaryResult;
             }
         }
