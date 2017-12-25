@@ -12,7 +12,7 @@ namespace KaranNumberProjects
         public static void BinToFromDecConverter()
         {
             int inputNumber = 0;
-            string result;
+            string result = "";
             string choice;
             bool correctInput = false;
             bool correctNumberInput = false;
@@ -44,6 +44,7 @@ namespace KaranNumberProjects
                     if (Int32.TryParse(Console.ReadLine(), out inputNumber) && inputNumber > 0)
                     {
                         correctInput = true;
+                        result = ReturnDecimalOrBinary(true, inputNumber);
                     }
                     else
                     {
@@ -60,13 +61,14 @@ namespace KaranNumberProjects
                     }
                     else
                     {
-                        Console.WriteLine("Enter an integer");
+                        Console.WriteLine("Enter a binary number");
+                        result = ReturnDecimalOrBinary(false, inputNumber);
                     }
                 }
                 
 
             }
-            result = ReturnDecimalOrBinary(true, inputNumber);
+            
 
             Console.WriteLine("Bnary version of dec number {0} is {1}", inputNumber, result);
 
@@ -75,10 +77,19 @@ namespace KaranNumberProjects
 
         static string ReturnDecimalOrBinary (bool isDecimalInput, int number)
         {
-            int fromBase = 10;
-            int toBase = 2;
-            string binaryResult = Convert.ToString(decNumber, toBase);
-            return binaryResult;
+            int toBase;
+            if (isDecimalInput)
+            {
+                toBase = 2;
+                string binaryResult = Convert.ToString(number, toBase);
+                return binaryResult;
+            }
+            else
+            {
+                toBase = 10;
+                string binaryResult = Convert.ToString(number, toBase);
+                return binaryResult;
+            }
         }
     }
 
