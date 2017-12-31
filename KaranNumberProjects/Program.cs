@@ -27,7 +27,8 @@ namespace KaranNumberProjects
             //PalindromCheck.CheckIfPalindrome();
             //WordCounter.WordCounterImplementation();
             //ModularExp.ModularExpImplementation();
-            BinToFromDec.BinToFromDecConverter();
+            //BinToFromDec.BinToFromDecConverter();
+            CreditCardChecker.CreditCardChecksum();
         }
 
     }

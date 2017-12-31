@@ -45,6 +45,7 @@
     <Compile Include="BinToFromDec.cs" />
     <Compile Include="BubbleSort.cs" />
     <Compile Include="CollatzConjecture.cs" />
+    <Compile Include="CreditCardChecker.cs" />
     <Compile Include="FibbonaciSequence.cs" />
     <Compile Include="FizzBuzz.cs" />
     <Compile Include="FloorPlan.cs" />
