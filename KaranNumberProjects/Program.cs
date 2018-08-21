@@ -28,7 +28,8 @@ namespace KaranNumberProjects
             //WordCounter.WordCounterImplementation();
             //ModularExp.ModularExpImplementation();
             //BinToFromDec.BinToFromDecConverter();
-            CreditCardChecker.CreditCardChecksum();
+            //CreditCardChecker.CreditCardChecksum();
+            WordFunnel.WordFunnelCheck();
         }
 
     }
