@@ -29,7 +29,8 @@ namespace KaranNumberProjects
             //ModularExp.ModularExpImplementation();
             //BinToFromDec.BinToFromDecConverter();
             //CreditCardChecker.CreditCardChecksum();
-            WordFunnel.WordFunnelCheck();
+            //WordFunnel.WordFunnelCheck();
+            TallyCounter.ReturnTally();
         }
 
     }
