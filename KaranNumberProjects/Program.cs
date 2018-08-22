@@ -30,7 +30,8 @@ namespace KaranNumberProjects
             //BinToFromDec.BinToFromDecConverter();
             //CreditCardChecker.CreditCardChecksum();
             //WordFunnel.WordFunnelCheck();
-            TallyCounter.ReturnTally();
+            //TallyCounter.ReturnTally();
+            DiceRoller.DiceRollerLoad();
         }
 
     }

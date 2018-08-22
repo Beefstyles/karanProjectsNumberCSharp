@@ -46,6 +46,7 @@
     <Compile Include="BubbleSort.cs" />
     <Compile Include="CollatzConjecture.cs" />
     <Compile Include="CreditCardChecker.cs" />
+    <Compile Include="DiceRoller.cs" />
     <Compile Include="FibbonaciSequence.cs" />
     <Compile Include="FizzBuzz.cs" />
     <Compile Include="FloorPlan.cs" />
