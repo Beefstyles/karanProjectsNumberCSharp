@@ -31,7 +31,8 @@ namespace KaranNumberProjects
             //CreditCardChecker.CreditCardChecksum();
             //WordFunnel.WordFunnelCheck();
             //TallyCounter.ReturnTally();
-            DiceRoller.DiceRollerLoad();
+            //DiceRoller.DiceRollerLoad();
+            Subfactorial.FindSubFactorial();
         }
 
     }
